@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plant Care Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 10px;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: bold;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        
+        .form-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .form-button:hover {
+            background-color: #45a049;
+        }
+        
+        .result-container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .result-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .result-item {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Plant Care Manager</h1>
+    
+    <div class="form-container">
+        <form id="plant-form">
+            <div class="form-group">
+                <label for="plant-name" class="form-label">Plant Name:</label>
+                <input type="text" id="plant-name" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="days-since-watering" class="form-label">Days Since Last Watering:</label>
+                <input type="number" id="days-since-watering" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="growth-stage" class="form-label">Current Growth Stage:</label>
+                <input type="text" id="growth-stage" class="form-input" required>
+            </div>
+            <button type="submit" class="form-button">Submit</button>
+        </form>
+    </div>
+    
+    <div id="result-container" class="result-container"></div>
+    
+    <script>
+        // JavaScript code to handle form submission and display the results
+        
+        // Get references to the form and result container
+        const form = document.getElementById('plant-form');
+        const resultContainer = document.getElementById('result-container');
+        
+        // Add event listener to form submission
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get form input values
+            const plantName = document.getElementById('plant-name').value;
+            const daysSinceWatering = parseInt(document.getElementById('days-since-watering').value);
+            const growthStage = document.getElementById('growth-stage').value;
+            
+            // Clear previous results
+            resultContainer.innerHTML = '';
+            
+            // Display plant information
+            const plantInfoTitle = document.createElement('h2');
+            plantInfoTitle.textContent = 'Plant Information:';
+            resultContainer.appendChild(plantInfoTitle);
+            
+            const plantInfoList = document.createElement('ul');
+            resultContainer.appendChild(plantInfoList);
+            
+            const addPlantInfo = function(label, value) {
+                const listItem = document.createElement('li');
+                listItem.textContent = label + ': ' + value;
+                plantInfoList.appendChild(listItem);
+            };
+            
+            // Add your plant information here
+            addPlantInfo('Name', plantName);
+            
+            // Provide care reminders
+            const careRemindersTitle = document.createElement('h2');
+            careRemindersTitle.textContent = 'Care Reminders:';
+            resultContainer.appendChild(careRemindersTitle);
+            
+            const addCareReminder = function(text) {
+                const careReminderItem = document.createElement('p');
+                careReminderItem.textContent = text;
+                resultContainer.appendChild(careReminderItem);
+            };
+            
+            // Add your care reminders here
+            addCareReminder('Example care reminder 1');
+            addCareReminder('Example care reminder 2');
+            
+            // Scroll to the result container
+            resultContainer.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
