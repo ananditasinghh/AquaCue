@@ -3,47 +3,48 @@
 <head>
     <title>Aqua Cue</title>
     <style>
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #b7f8b7; /* Light Green */
+            background-color: #b6f6b6; /* Light Green */
         }
-        
+
         h1 {
             text-align: center;
             color: #9932CC; /* Dark Purple */
             margin-bottom: 20px;
-            font-family: 'Tahoma', sans-serif; 
+            font-family: 'Tahoma', sans-serif; /* Nice font */
         }
-        
-        .form-container {
-            max-width: 500px;
-            margin: 1 auto;
-            background-color: #5dceea; /* Powder Blue */
-            border-radius: 4px;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
+
         .form-group {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
-        
+
+        .form-container {
+         max-width: 500px;
+         margin: 0 auto;
+         background-color: #5dceea; /* Powder Blue */
+         border-radius: 4px;
+         padding: 20px;
+         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
         .form-label {
             display: block;
             font-weight: bold;
             color: #120606;
             margin-bottom: 5px;
         }
-        
+
         .form-input {
-            width: 100%;
-            padding: 5px;
-            border-radius: 4px;
-            border: 1px solid #074406;
+            width: 96%;
+            padding: 8px;
+            border-radius: 8px;
+            border: 2px solid #074406;
         }
-        
+
         .form-button {
             padding: 10px 20px;
             background-color: #052307;
@@ -52,11 +53,11 @@
             border-radius: 4px;
             cursor: pointer;
         }
-        
+
         .form-button:hover {
-            background-color:  #2a9bb1;
+            background-color: #2a9bb1;
         }
-        
+
         .result-container {
             margin-top: 20px;
             padding: 10px;
@@ -66,25 +67,72 @@
             color: #333;
             text-align: center;
         }
-        
+
         .result-title {
             font-weight: bold;
             margin-bottom: 10px;
-            color: #7d13e0; /* Magenta */
+            color: #7d13e0; /* PURPLE */
         }
-        
+
         .result-item {
             margin-bottom: 5px;
             color: #000000;
         }
-        
+
+        .flowers {
+            position: relative;
+            bottom: 1;
+            left: 10;
+            right: 10;
+            z-index: -1;
+            text-align: center;
+        }
+
+        .flower {
+            position: absolute;
+            animation-name: flower-animation;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes flower-animation {
+            0% {
+                transform: translateY(0) rotate(0);
+            }
+            50% {
+                transform: translateY(-100px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+
+        .grass {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 140px; 
+            background-color: #228B22; /* Dark Green */
+        }
+
+        .sun {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            width: 80px;
+            height: 80px;
+            background-color: #f3d633; /* Dark Yellow */
+            border-radius: 50%;
+        }
+
     </style>
 
-    
+
 </head>
 <body>
-    <h1>AquaCue</h1>
-    
+    <h1>Aqua Cue</h1>
+
     <div class="form-container">
         <form id="plant-form">
             <div class="form-group">
@@ -102,62 +150,169 @@
             <button type="submit" class="form-button">Submit</button>
         </form>
     </div>
-    
+
     <div id="result-container" class="result-container"></div>
-    
+
+    <div class="flowers">
+        <div class="flower" style="top: 100px; left: 10px;">
+            <svg width="80" height="80">
+                <rect x="0" y="30" width="10" height="20" fill="#FF69B4" />
+                <rect x="15" y="0" width="10" height="20" fill="#FF69B4" />
+                <rect x="30" y="20" width="10" height="20" fill="#FF69B4" />
+                <rect x="45" y="10" width="10" height="20" fill="#FF69B4" />
+                <rect x="60" y="30" width="10" height="20" fill="#FF69B4" />
+            </svg>
+        </div>
+        <div class="flower" style="top: 200px; left: 30px;">
+            <svg width="80" height="80">
+                <rect x="0" y="30" width="10" height="20" fill="#FF4500" />
+                <rect x="15" y="0" width="10" height="20" fill="#FF4500" />
+                <rect x="30" y="20" width="10" height="20" fill="#FF4500" />
+                <rect x="45" y="10" width="10" height="20" fill="#FF4500" />
+                <rect x="60" y="30" width="10" height="20" fill="#FF4500" />
+            </svg>
+        </div>
+        <div class="flower" style="top: 150px; left: 50px;" >
+            <svg width="80" height="80">
+                <rect x="0" y="30" width="10" height="20" fill="#9370DB" />
+                <rect x="15" y="0" width="10" height="20" fill="#9370DB" />
+                <rect x="30" y="20" width="10" height="20" fill="#9370DB" />
+                <rect x="45" y="10" width="10" height="20" fill="#9370DB" />
+                <rect x="60" y="30" width="10" height="20" fill="#9370DB" />
+            </svg>
+        </div>
+        <div class="flower" style="top: 100px; right: 10px;">
+            <svg width="80" height="80">
+                <rect x="0" y="30" width="10" height="20" fill="#00BFFF" />
+                <rect x="15" y="0" width="10" height="20" fill="#00BFFF" />
+                <rect x="30" y="20" width="10" height="20" fill="#00BFFF" />
+                <rect x="45" y="10" width="10" height="20" fill="#00BFFF" />
+                <rect x="60" y="30" width="10" height="20" fill="#00BFFF" />
+            </svg>
+        </div>
+        <div class="flower" style="top: 200px; right: 30px;">
+            <svg width="80" height="80">
+                <rect x="0" y="30" width="10" height="20" fill="#00FF00" />
+                <rect x="15" y="0" width="10" height="20" fill="#00FF00" />
+                <rect x="30" y="20" width="10" height="20" fill="#00FF00" />
+                <rect x="45" y="10" width="10" height="20" fill="#00FF00" />
+                <rect x="60" y="30" width="10" height="20" fill="#00FF00" />
+            </svg>
+        </div>
+        <div class="flower" style="top: 150px; right: 50px;">
+            <svg width="80" height="80">
+                <rect x="0" y="30" width="10" height="20" fill="#FFA500" />
+                <rect x="15" y="0" width="10" height="20" fill="#FFA500" />
+                <rect x="30" y="20" width="10" height="20" fill="#FFA500" />
+                <rect x="45" y="10" width="10" height="20" fill="#FFA500" />
+                <rect x="60" y="30" width="10" height="20" fill="#FFA500" />
+            </svg>
+        </div>
+    </div>
+  
+    <div class="background">
+        <div class="canvas-container">
+          <canvas id="fieldCanvas" style="width: 100%; height: 100%"> </canvas>
+        </div>
+      </div>
+
+    <div class="grass"></div>
+
+    <div class="sun"></div>
+
     <script>
-        
-        
+  
+        const plantData = {
+            "Rose": {"name": "Rose", "species": "Rosa", "wateringFrequency": 2, "sunlightRequirement": 8, "growthStage": "Young"},
+            "Lily": {"name": "Lily", "species": "Lilium", "wateringFrequency": 3, "sunlightRequirement": 6, "growthStage": "Growing"},
+            "Sunflower": {"name": "Sunflower", "species": "Helianthus", "wateringFrequency": 1, "sunlightRequirement": 7, "growthStage": "Mature"}
+        };
+
+        // Get references to the form and result container
         const form = document.getElementById('plant-form');
         const resultContainer = document.getElementById('result-container');
-        
+
         // Add event listener to form submission
         form.addEventListener('submit', function(event) {
             event.preventDefault();
-            
+
             // Get form input values
             const plantName = document.getElementById('plant-name').value;
             const daysSinceWatering = parseInt(document.getElementById('days-since-watering').value);
             const growthStage = document.getElementById('growth-stage').value;
-            
+
             // Clear previous results
             resultContainer.innerHTML = '';
-            
+
             // Display plant information
             const plantInfoTitle = document.createElement('h2');
             plantInfoTitle.textContent = 'Plant Information:';
+            plantInfoTitle.classList.add('result-title');
             resultContainer.appendChild(plantInfoTitle);
-            
+
             const plantInfoList = document.createElement('ul');
             resultContainer.appendChild(plantInfoList);
-            
+
             const addPlantInfo = function(label, value) {
                 const listItem = document.createElement('li');
                 listItem.textContent = label + ': ' + value;
+                listItem.classList.add('result-item');
                 plantInfoList.appendChild(listItem);
             };
-            
-            // Add your plant information here
-            addPlantInfo('Name', plantName);
-            
-            // Provide care reminders
-            const careRemindersTitle = document.createElement('h2');
-            careRemindersTitle.textContent = 'Care Reminders:';
-            resultContainer.appendChild(careRemindersTitle);
-            
-            const addCareReminder = function(text) {
-                const careReminderItem = document.createElement('p');
-                careReminderItem.textContent = text;
-                resultContainer.appendChild(careReminderItem);
-            };
-            
-            // Add your care reminders here
-            addCareReminder('Example care reminder 1');
-            addCareReminder('Example care reminder 2');
-            
+
+            if (plantData.hasOwnProperty(plantName)) {
+                const plant = plantData[plantName];
+
+                addPlantInfo('Name', plant.name);
+                addPlantInfo('Species', plant.species);
+                addPlantInfo('Watering Frequency', plant.wateringFrequency + ' days');
+                addPlantInfo('Sunlight Requirement', plant.sunlightRequirement + ' hours');
+                addPlantInfo('Growth Stage', plant.growthStage);
+
+                // Provide care reminders
+                const careRemindersTitle = document.createElement('h2');
+                careRemindersTitle.textContent = 'Care Reminders:';
+                careRemindersTitle.classList.add('result-title');
+                resultContainer.appendChild(careRemindersTitle);
+
+                const addCareReminder = function(text) {
+                    const careReminderItem = document.createElement('p');
+                    careReminderItem.textContent = text;
+                    careReminderItem.classList.add('result-item');
+                    resultContainer.appendChild(careReminderItem);
+                };
+
+                const daysUntilNextWatering = plant.wateringFrequency - daysSinceWatering;
+                if (daysSinceWatering >= plant.wateringFrequency) {
+                    addCareReminder("It's time to water " + plantName + "!");
+                } else if (daysUntilNextWatering > 0) {
+                    addCareReminder(plantName + " should be watered in " + daysUntilNextWatering + " day(s).");
+                } else {
+                    addCareReminder("No watering needed for " + plantName + " right now.");
+                }
+
+                if (new Date().getHours() >= 6 && new Date().getHours() <= 18) {
+                    if (new Date().getHours() < plant.sunlightRequirement) {
+                        addCareReminder("Make sure " + plantName + " gets enough sunlight!");
+                    }
+                } else {
+                    addCareReminder("It's nighttime. " + plantName + " should be in a dark environment.");
+                }
+
+                if (growthStage !== plant.growthStage) {
+                    addCareReminder("Consider updating the growth stage for " + plantName + ".");
+                }
+            } else {
+                const plantNotFound = document.createElement('p');
+                plantNotFound.textContent = 'Plant not found!';
+                plantNotFound.classList.add('result-item');
+                resultContainer.appendChild(plantNotFound);
+            }
+
             // Scroll to the result container
             resultContainer.scrollIntoView({ behavior: 'smooth' });
         });
     </script>
 </body>
 </html>
+
