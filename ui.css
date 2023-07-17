@@ -1,125 +1,124 @@
-    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #b6f6b6; /* Light Green */
+}
 
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #b6f6b6; /* Light Green */
-        }
+h1 {
+    text-align: center;
+    color: #9932CC; /* Dark Purple */
+    margin-bottom: 20px;
+    font-family: 'Tahoma', sans-serif; /* Nice font */
+}
 
-        h1 {
-            text-align: center;
-            color: #9932CC; /* Dark Purple */
-            margin-bottom: 20px;
-            font-family: 'Tahoma', sans-serif; /* Nice font */
-        }
+.form-group {
+    margin-bottom: 15px;
+}
 
-        .form-group {
-            margin-bottom: 15px;
-        }
+.form-container {
+ max-width: 500px;
+ margin: 0 auto;
+ background-color: #5dceea; /* Powder Blue */
+ border-radius: 4px;
+ padding: 20px;
+ box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-        .form-container {
-         max-width: 500px;
-         margin: 0 auto;
-         background-color: #5dceea; /* Powder Blue */
-         border-radius: 4px;
-         padding: 20px;
-         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+.form-label {
+    display: block;
+    font-weight: bold;
+    color: #120606;
+    margin-bottom: 5px;
+}
 
-        .form-label {
-            display: block;
-            font-weight: bold;
-            color: #120606;
-            margin-bottom: 5px;
-        }
+.form-input {
+    width: 96%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid #074406;
+}
 
-        .form-input {
-            width: 96%;
-            padding: 8px;
-            border-radius: 8px;
-            border: 2px solid #074406;
-        }
+.form-button {
+    padding: 10px 20px;
+    background-color: #052307;
+    color: #f7eeee;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-        .form-button {
-            padding: 10px 20px;
-            background-color: #052307;
-            color: #f7eeee;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+.form-button:hover {
+    background-color: #2a9bb1;
+}
 
-        .form-button:hover {
-            background-color: #2a9bb1;
-        }
+.result-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #bdc0eb;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #333;
+    text-align: center;
+}
 
-        .result-container {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #bdc0eb;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            color: #333;
-            text-align: center;
-        }
+.result-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #7d13e0; /* PURPLE */
+}
 
-        .result-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #7d13e0; /* PURPLE */
-        }
+.result-item {
+    margin-bottom: 5px;
+    color: #000000;
+}
 
-        .result-item {
-            margin-bottom: 5px;
-            color: #000000;
-        }
+.flowers {
+    position: relative;
+    bottom: 1;
+    left: 10;
+    right: 10;
+    z-index: -1;
+    text-align: center;
+}
 
-        .flowers {
-            position: relative;
-            bottom: 1;
-            left: 10;
-            right: 10;
-            z-index: -1;
-            text-align: center;
-        }
+.flower {
+    position: absolute;
+    animation-name: flower-animation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
 
-        .flower {
-            position: absolute;
-            animation-name: flower-animation;
-            animation-duration: 8s;
-            animation-iteration-count: infinite;
-        }
+@keyframes flower-animation {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-100px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
 
-        @keyframes flower-animation {
-            0% {
-                transform: translateY(0) rotate(0);
-            }
-            50% {
-                transform: translateY(-100px) rotate(180deg);
-            }
-            100% {
-                transform: translateY(0) rotate(360deg);
-            }
-        }
+.grass {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 140px; 
+    background-color: #228B22; /* Dark Green */
+}
 
-        .grass {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 140px; 
-            background-color: #228B22; /* Dark Green */
-        }
+.sun {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    background-color: #f3d633; /* Dark Yellow */
+    border-radius: 50%;
+}
 
-        .sun {
-            position: fixed;
-            top: 20px;
-            right: 30px;
-            width: 80px;
-            height: 80px;
-            background-color: #f3d633; /* Dark Yellow */
-            border-radius: 50%;
-        }
 
-    </style>
+
