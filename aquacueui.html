@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Plant Care Manager</title>
+    <title>Aqua Cue</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            background-color: #b7f8b7; /* Light Green */
         }
         
         h1 {
             text-align: center;
+            color: #9932CC; /* Dark Purple */
+            margin-bottom: 20px;
+            font-family: 'Tahoma', sans-serif; 
         }
         
         .form-container {
-            max-width: 400px;
-            margin: 0 auto;
+            max-width: 500px;
+            margin: 1 auto;
+            background-color: #5dceea; /* Powder Blue */
+            border-radius: 4px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .form-group {
@@ -25,44 +33,54 @@
         .form-label {
             display: block;
             font-weight: bold;
+            color: #120606;
+            margin-bottom: 5px;
         }
         
         .form-input {
             width: 100%;
             padding: 5px;
             border-radius: 4px;
-            border: 1px solid #ccc;
+            border: 1px solid #074406;
         }
         
         .form-button {
             padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
+            background-color: #052307;
+            color: #f7eeee;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
         
         .form-button:hover {
-            background-color: #45a049;
+            background-color:  #2a9bb1;
         }
         
         .result-container {
             margin-top: 20px;
             padding: 10px;
-            border: 1px solid #ccc;
+            background-color: #bdc0eb;
             border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #333;
+            text-align: center;
         }
         
         .result-title {
             font-weight: bold;
             margin-bottom: 10px;
+            color: #7d13e0; /* Magenta */
         }
         
         .result-item {
             margin-bottom: 5px;
+            color: #000000;
         }
+        
     </style>
+
+    
 </head>
 <body>
     <h1>AquaCue</h1>
@@ -89,10 +107,6 @@
     
     <script>
         
-        //THIS !!!
-        
-        // JavaScript code to handle form submission and display the results
-        // Get references to the form and result container
         
         const form = document.getElementById('plant-form');
         const resultContainer = document.getElementById('result-container');
