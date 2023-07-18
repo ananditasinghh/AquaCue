@@ -1,5 +1,3 @@
-
-  
 // Define an object with the plant data
 const plantData = {
     "Rose": {
