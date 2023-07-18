@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #b6f6b6; /* Light Green */
+    background-color: #b2ebb2; /* Light Green */
 }
 
 h1 {
@@ -14,6 +14,28 @@ h1 {
 
 .form-group {
     margin-bottom: 15px;
+}
+
+/* Add this CSS to style the plant name box specifically */
+.form-select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid #032d03;
+    appearance: none; /* Remove default appearance */
+    background: transparent; /* Make background transparent */
+    background-image: url("dropdown-arrow.svg"); /* Add custom dropdown arrow icon */
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: #ffffff; /* Set background color to white */
+    background-size: 20px;
+    padding-right: 30px; /* Add space for the arrow icon */
+}
+
+/* Style the options within the dropdown */
+.form-select option {
+    background-color: #e2ede2; /* Light Green */
+    color: #d1e4d1;
 }
 
 .form-container {
@@ -42,7 +64,7 @@ h1 {
 .form-button {
     padding: 10px 20px;
     background-color: #052307;
-    color: #f7eeee;
+    color: #ede0e0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -119,6 +141,7 @@ h1 {
     background-color: #f3d633; /* Dark Yellow */
     border-radius: 50%;
 }
+
 
 
 
