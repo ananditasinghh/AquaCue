@@ -191,10 +191,9 @@ h1 {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 130px; 
+    height: 119px; 
     background-image: linear-gradient(to bottom right , #27a627, #0f760f, #03340c), url('flowers.jpeg');
 }
-
 
 .sun {
     position: fixed;
