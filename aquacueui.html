@@ -4,8 +4,37 @@
     <title>Aqua Cue</title>
     <link href="ui.css" rel="stylesheet" type="text/css">
     <script src="ui.js" defer></script>
+    
+
+    <script>
+       
+
+        // LinkedIn Share Function
+        function shareOnLinkedIn() {
+            // Replace the URL and title with your desired content to share
+            const url = 'file:///Users/ananditasingh/Desktop/aquacue%20project%20/aquacueui.html';
+            const title = 'Check out this amazing plant care website!';
+
+            const linkedInShareURL = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`;
+            window.open(linkedInShareURL, '_blank');
+        }
+
+        // Twitter Share Function
+        function shareOnTwitter() {
+            // Replace the URL and text with your desired content to share
+            const url = 'https://www.example.com';
+            const text = 'Check out this amazing plant care website!';
+
+            const twitterShareURL = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+            window.open(twitterShareURL, '_blank');
+        }
+    </script>
+
+
+
 </head>
 <body>
+
     <h1>Aqua Cue</h1>
 
     <div class="form-container">
@@ -65,12 +94,68 @@
 
     <div id="result-container" class="result-container"></div>
 
+    <div id="result-container" class="result-container">
+        <!-- ... Existing result content ... -->
+        <!-- Add social media sharing buttons -->
+        <div class="social-share">
+            <a href="#" onclick="shareOnLinkedIn(); return false;">
+                <img src="linkedin.png" alt="Share on LinkedIn" height="28px" width = "28px" title="Share on LinkedIn">
+            </a>
+            <a href="#" onclick="shareOnTwitter(); return false;">
+                <img src="twitter.jpg" alt="Share on Twitter" height="28px" width = "28px" title="Share on Twitter">
+            </a>
+        </div>
+    </div>
+
     <div class="flowers">
-        <!-- Flower SVG elements -->
+        <div class="flower-pot" style="left: 10%;">
+            <svg class="flower" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 100 100">
+                <rect class="rectangle" x="40" y="40" width="20" height="40"/>
+                <polygon class="triangle" points="50,20 60,40 40,40"/>
+                <polygon class="triangle" points="50,80 60,60 40,60"/>
+                <polygon class="triangle" points="20,50 40,60 40,40"/>
+                <polygon class="triangle" points="80,50 60,40 60,60"/>
+                <circle class="triangle" cx="50" cy="50" r="10" fill="yellow"/>
+            </svg>
+        </div>
+
+        <div class="flower-pot" style="left: 30%;">
+            <svg class="flower" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 100 100" >
+                <rect class="rectangle" x="40" y="40" width="20" height="40"/>
+                <polygon class="triangle" points="50,20 60,40 40,40"/>
+                <polygon class="triangle" points="50,80 60,60 40,60"/>
+                <polygon class="triangle" points="20,50 40,60 40,40"/>
+                <polygon class="triangle" points="80,50 60,40 60,60"/>
+                <circle class="triangle" cx="50" cy="50" r="10" fill="yellow"/>
+            </svg>
+        </div>
+
+        <div class="flower-pot" style="left: 50%;">
+            <svg class="flower" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 100 100" >
+                <rect class="rectangle" x="40" y="40" width="20" height="40"/>
+                <polygon class="triangle" points="50,20 60,40 40,40"/>
+                <polygon class="triangle" points="50,80 60,60 40,60"/>
+                <polygon class="triangle" points="20,50 40,60 40,40"/>
+                <polygon class="triangle" points="80,50 60,40 60,60"/>
+                <circle class="triangle" cx="50" cy="50" r="10" fill="yellow"/>
+            </svg>
+        </div>
+
+        <div class="flower-pot" style="left: 70%;">
+            <svg class="flower" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 100 100" >
+                <rect class="rectangle" x="40" y="40" width="20" height="40"/>
+                <polygon class="triangle" points="50,20 60,40 40,40"/>
+                <polygon class="triangle" points="50,80 60,60 40,60"/>
+                <polygon class="triangle" points="20,50 40,60 40,40"/>
+                <polygon class="triangle" points="80,50 60,40 60,60"/>
+                <circle class="triangle" cx="50" cy="50" r="10" fill="yellow"/>
+            </svg>
+        </div>
+
     </div>
 
     <div class="grass"></div>
-
+    
     <div class="sun"></div>
 </body>
 </html>
