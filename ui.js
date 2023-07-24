@@ -329,7 +329,7 @@ form.addEventListener('submit', function(event) {
     // Get form input values
     const plantName = document.getElementById('plant-name').value;
     const daysSinceWatering = parseInt(document.getElementById('days-since-watering').value);
-   // const growthStage = document.getElementById('growth-stage').value;
+  //  const growthStage = document.getElementById('growth-stage').value;
 
     // Clear previous results
     resultContainer.innerHTML = '';
@@ -357,7 +357,7 @@ form.addEventListener('submit', function(event) {
         addPlantInfo('Species', plant.species);
         addPlantInfo('Watering Frequency', plant.wateringFrequency + ' days');
         addPlantInfo('Sunlight Requirement', plant.sunlightRequirement + ' hours');
-        //addPlantInfo('Growth Stage', plant.growthStage);
+       // addPlantInfo('Growth Stage', plant.growthStage);
 
         // Provide care reminders
         const careRemindersTitle = document.createElement('h2');
