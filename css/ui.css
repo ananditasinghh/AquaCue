@@ -1,0 +1,209 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: linear-gradient(to bottom right , #baedba, #8cdc8c, #dcecbd);
+}
+
+h1 {
+    text-align: center;
+    color: #9932CC; /* Dark Purple */
+    margin-bottom: 20px;
+    font-family: 'Tahoma', sans-serif; /* Nice font */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+.social-share {
+    display: flex;
+    justify-content: left;
+    height : 35px;
+    margin-top: 2px;
+    background-color: #35c2de;
+}
+
+.social-share a {
+    margin: 5px;
+    height: 1%; /* Adjust the height as per your preference */
+}
+
+/* Add this CSS to style the plant name box specifically */
+.form-select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid #032d03;
+    appearance: none; /* Remove default appearance */
+    background: transparent; /* Make background transparent */
+    background-image: url("dropdown-arrow.svg"); /* Add custom dropdown arrow icon */
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: #ffffff; /* Set background color to white */
+    background-size: 20px;
+    padding-right: 30px; /* Add space for the arrow icon */
+}
+
+/* Style the options within the dropdown */
+.form-select option {
+    background-color: #e2ede2; /* Light Green */
+    color: #d1e4d1;
+}
+
+.form-container {
+ max-width: 500px;
+ margin: 0 auto;
+ background-color: #5dceea; /* Powder Blue */
+ border-radius: 4px;
+ padding: 20px;
+ box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    color: #120606;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 96%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid #074406;
+}
+
+.form-button {
+    padding: 10px 20px;
+    background-color: #052307;
+    color: #ede0e0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #229fb8;
+}
+
+.result-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #09166c;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(241, 237, 237, 0.1);
+    color: #e5d8d8;
+    text-align: center;
+}
+
+.result-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #c8a1ec; /* PURPLE */
+}
+
+.result-item {
+    margin-bottom: 5px;
+    color: #d0c8c8;
+}
+.flower-pot {
+    position: relative;
+    width: 120px;
+    height: 180px;
+    margin: 20px;
+}
+
+.flower {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.flowers {
+    position: relative;
+    bottom: 1;
+    left: 10;
+    right: 10;
+    z-index: -1;
+    text-align: center;
+}
+
+.flower-pot:nth-child(3) {
+    left: 50%;
+}
+
+.flower-pot:nth-child(4) {
+    left: 70%;
+}
+
+.flower {
+    position: absolute;
+    animation-name: flower-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+.flower-pot {
+    position: relative;
+    width: 120px;
+    height: 180px;
+    margin: 20px;
+}
+
+.flower {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rectangle {
+    fill: yellow;
+}
+
+.triangle {
+    fill: pink;
+}
+
+
+@keyframes flower-animation {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-100px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+.grass {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 119px; 
+    background-image: linear-gradient(to bottom right , #27a627, #0f760f, #03340c), url('flowers.jpeg');
+}
+
+
+.sun {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    background-color: #f3d633; /* Dark Yellow */
+    border-radius: 50%;
+}
+
+
